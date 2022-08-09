@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 id="hienra"></h1>
+</body>
+<script>
+  for (i=1;i<=100;i++) {
+    if (i%3==0 && i%5==0) {
+      document.getElementById("hienra").innerHTML+= "FizzBuzz"+" "
+    }
+    else if (i%5==0) {
+      document.getElementById("hienra").innerHTML+= "Buzz"+" "
+    }
+    else if (i%3==0) {
+      document.getElementById("hienra").innerHTML+= "Fizz"+" "
+    }
+    else {
+      document.getElementById("hienra").innerHTML+= i + " "
+    }
+  }
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="hienra"></h1>
+</body>
+<script>
+  function kiemtra(a) {
+    souoc=0;
+    for (y=2;y<= Math.sqrt(a);y++) {
+      if (a%y==0) {
+        souoc=souoc+1;
+      }
+    }
+    if (souoc>0) {
+      return false;
+    }
+    else {
+      return true;
+    }
+  }
+  let n = +prompt("Nhap n so nguyuen to dau tien")
+  let i=2;
+  let d=0;
+  while (d<n) {
+    if (kiemtra(i)==true) {
+      document.getElementById("hienra").innerHTML+=i+" ";
+      d=d+1;
+    }
+    i=i+1;
+  }
+</script>
+
+</html>

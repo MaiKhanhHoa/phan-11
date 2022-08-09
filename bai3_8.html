@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="start" onclick="start()">START</button>
+    <h1 id="ketqua"></h1>
+</body>
+<script>
+  function start() {
+    let a= +prompt("Số bạn muốn đoán trong khoảng")
+    let c =  Math.floor(Math.random()*a)
+    for (let i=1;i<=3;i++) {
+        let b = +prompt("Nhập số bạn đoán")
+        if (b === c) {
+            document.getElementById("ketqua").innerHTML = "Chúc mừng bạn đã đoán trúng"
+            return;
+        } else if (b < c) {
+            alert("Số bạn đoán bé hơn")
+        }
+        else {
+            alert("Số bạn đoán lớn hơn")
+        }
+    }
+      document.getElementById("ketqua").innerHTML = "Hết lượt đoán"
+  }
+</script>
+</html>
